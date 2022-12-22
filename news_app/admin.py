@@ -10,7 +10,7 @@ class NewsAdmin(admin.ModelAdmin):
     date_hierarchy = 'publish_time'
     search_fields = ['title', 'body']
     ordering = ['status', 'publish_time']
-
+# admin.site.register(News)
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):

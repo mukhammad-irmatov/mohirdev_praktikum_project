@@ -1,7 +1,10 @@
 {% extends 'news/base.html' %}
 {% load static %}
 {% load hitcount_tags %}
-{% block title %} Bosh sahifa {% endblock %}
+{% load i18n %}
+{% block title %}
+    {% blocktrans %} Bosh sahifa {% endblocktrans %}
+{% endblock %}
 
 {% block content %}
   <section id="sliderSection">
@@ -9,7 +12,7 @@
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="slick_slider">
             {% for news in news_list %}
-          <div class="single_iteam"> <a href="{{ news.get_absolute_url }}"> <img src="{{ news.image }}" alt=""></a>
+          <div class="single_iteam"> <a href="{{ news.get_absolute_url }}"> <img src="{{ news.image.url }}" alt=""></a>
             <div class="slider_article">
               <h2><a class="slider_tittle" href="{{ news.get_absolute_url }}">{{ news.title | truncatewords:5 }}</a></h2>
               <p>{{ news.title }}</p>
@@ -21,15 +24,15 @@
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="latest_post">
-          <h2><span>So'nggi yangiliklar</span></h2>
+          <h2><span>{% blocktrans %} So'nggi yangiliklar {% endblocktrans %}</span></h2>
           <div class="latest_post_container">
             <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
             <ul class="latest_postnav">
                 {% for news in news_list %}
               <li>
-                <div class="media"> <a href="{{ news.get_absolute_url }}" class="media-left"> <img alt="" src="{{ news.image }}"> </a>
+                <div class="media"> <a href="{{ news.get_absolute_url }}" class="media-left"> <img alt="" src="{{ news.image.url }}"> </a>
                   <div class="media-body"> <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a>
-                  <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for news %}</p>
+                  <p>{% blocktrans %} Ko'rilganlar soni: {% endblocktrans %}<i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for news %}</p>
                   </div>
                 </div>
               </li>
@@ -46,13 +49,13 @@
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="left_content">
           <div class="single_post_content">
-            <h2><span>Mahalliy</span></h2>
+            <h2><span>{% blocktrans %}Mahalliy {% endblocktrans %}</span></h2>
             <div class="single_post_content_left">
               <ul class="business_catgnav  wow fadeInDown">
                 {% for mahalliy in mahalliy_xabarlar %}
                     {% if forloop.first %}
                 <li>
-                  <figure class="bsbig_fig"> <a href="{{ mahalliy.get_absolute_url }}" class="featured_img"> <img alt="" src="{{ mahalliy.image }}"> <span class="overlay"></span>
+                  <figure class="bsbig_fig"> <a href="{{ mahalliy.get_absolute_url }}" class="featured_img"> <img alt="" src="{{ mahalliy.image.url }}"> <span class="overlay"></span>
                     <figcaption> <a href="{{ mahalliy.get_absolute_url }}">{{ local.title }}</a> </figcaption> </a>
                     <p>{{ mahalliy.body|truncatewords:10 }}</p>
                       <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for mahalliy %}</p>
@@ -68,7 +71,7 @@
               {% for mahalliy in mahalliy_xabarlar %}
                   {% if forloop.counter > 1 %}
                 <li>
-                  <div class="media wow fadeInDown"> <a href="{{mahalliy.get_absolute_url}}" class="media-left"> <img alt="" src="{{ mahalliy.image }}"> </a>
+                  <div class="media wow fadeInDown"> <a href="{{mahalliy.get_absolute_url}}" class="media-left"> <img alt="" src="{{ mahalliy.image.url }}"> </a>
                     <div class="media-body"> <a href="{{mahalliy.get_absolute_url}}" class="catg_title">{{ mahalliy.title }}</a>
                   <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for mahalliy %}</p>
 
@@ -88,7 +91,7 @@
                     {% for xorij in xorij_xabalari %}
                         {% if forloop.first %}
                   <li>
-                    <figure class="bsbig_fig"> <a href="{{xorij.get_absolute_url}}" class="featured_img"> <img alt="" src="{{ xorij.image }}"> <span class="overlay"></span> </a>
+                    <figure class="bsbig_fig"> <a href="{{xorij.get_absolute_url}}" class="featured_img"> <img alt="" src="{{ xorij.image.url }}"> <span class="overlay"></span> </a>
                       <figcaption> <a href="{{xorij.get_absolute_url}}">{{ xorij.title }}</a> </figcaption>
                       <p>{{ xorij.body | truncatewords:10 }}</p>
                     </figure>
@@ -100,7 +103,7 @@
                 {% for xorij in xorij_xabalari %}
                     {% if forloop.counter > 1 %}
                   <li>
-                    <div class="media wow fadeInDown"> <a href="{{xorij.get_absolute_url}}" class="media-left"> <img alt="" src="{{ xorij.image }}"> </a>
+                    <div class="media wow fadeInDown"> <a href="{{xorij.get_absolute_url}}" class="media-left"> <img alt="" src="{{ xorij.image.url }}"> </a>
                       <div class="media-body"> <a href="{{xorij.get_absolute_url}}" class="catg_title"> {{ xorij.title }}</a> </div>
                     </div>
                   </li>
@@ -116,7 +119,7 @@
                     {% for texnologiya in texnologiya_xabarlari %}
                     {% if forloop.first %}
                   <li>
-                    <figure class="bsbig_fig wow fadeInDown"> <a href="{{texnologiya.get_absolute_url}}" class="featured_img"> <img alt="" src="{{ texnologiya.image }}"> <span class="overlay"></span> </a>
+                    <figure class="bsbig_fig wow fadeInDown"> <a href="{{texnologiya.get_absolute_url}}" class="featured_img"> <img alt="" src="{{ texnologiya.image.url }}"> <span class="overlay"></span> </a>
                       <figcaption> <a href="{{texnologiya.get_absolute_url}}">{{ texnologiya.title }}</a> </figcaption>
                       <p>{{ texnologiya.body | truncatewords:10 }}</p>
                     </figure>
@@ -128,7 +131,7 @@
                     {% for texnologiya in texnologiya_xabarlari %}
                     {% if forloop.counter > 1 %}
                   <li>
-                    <div class="media wow fadeInDown"> <a href="{{texnologiya.get_absolute_url}}" class="media-left"> <img alt="" src="{{ texnologiya.image }}"> </a>
+                    <div class="media wow fadeInDown"> <a href="{{texnologiya.get_absolute_url}}" class="media-left"> <img alt="" src="{{ texnologiya.image.url }}"> </a>
                       <div class="media-body"> <a href="{{texnologiya.get_absolute_url}}" class="catg_title">{{ texnologiya.title }}</a> </div>
                     </div>
                   </li>
@@ -180,7 +183,7 @@
                       {% for sport in sport_xabarlari %}
                     {% if forloop.first %}
                 <li>
-                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="{{sport.get_absolute_url}}"> <img src="{{ sport.image }}" alt=""> <span class="overlay"></span> </a>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="{{sport.get_absolute_url}}"> <img src="{{ sport.image.url }}" alt=""> <span class="overlay"></span> </a>
                     <figcaption> <a href="{{sport.get_absolute_url}}">{{ sport.title }}</a> </figcaption>
                     <p>{{ sport.body | truncatewords:10 }}</p>
                   </figure>
@@ -194,7 +197,7 @@
                   {% for sport in sport_xabarlari %}
                     {% if forloop.counter > 1 %}
                 <li>
-                  <div class="media wow fadeInDown"> <a href="{{sport.get_absolute_url}}" class="media-left"> <img alt="" src="{{ sport.image }}"> </a>
+                  <div class="media wow fadeInDown"> <a href="{{sport.get_absolute_url}}" class="media-left"> <img alt="" src="{{ sport.image.url }}"> </a>
                     <div class="media-body"> <a href="{{sport.get_absolute_url}}" class="catg_title"> {{ sport.title }} </a> </div>
                   </div>
                 </li>
@@ -208,7 +211,7 @@
       <div class="col-lg-4 col-md-4 col-sm-4">
         <aside class="right_content">
           <div class="single_sidebar">
-            <h2><span>Ommabop</span></h2>
+            <h2><span>{% blocktrans %}  Ommabop {% endblocktrans %}</span></h2>
               {% for news in popular_news %}
             <ul class="spost_nav">
               <li>
@@ -268,7 +271,7 @@
             <h2><span>Sponsor</span></h2>
             <a class="sideAdd" href="#"><img src="{% static 'images/add_img.jpg' %}" alt=""></a> </div>
           <div class="single_sidebar wow fadeInDown">
-            <h2><span>Barcha kategoriyalar</span></h2>
+            <h2><span>{% blocktrans %} Barcha kategoriyalar {% endblocktrans %}</span></h2>
             <select class="catgArchive">
               <option>Kategoriyani tanlang</option>
                 {% for kategory in categories %}

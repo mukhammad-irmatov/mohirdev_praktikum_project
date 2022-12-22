@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce59ee50-b361-40bd-b2d1-80f5d1745f11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/news_app/translation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/news_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -94,7 +101,7 @@
       <workItem from="1668772958237" duration="2599000" />
       <workItem from="1668837163788" duration="8150000" />
       <workItem from="1670993677527" duration="41895000" />
-      <workItem from="1671605298768" duration="12202000" />
+      <workItem from="1671605298768" duration="19947000" />
     </task>
     <servers />
   </component>
