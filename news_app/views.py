@@ -38,6 +38,7 @@ def news_detail(request, news):
         hitcontext['total_hits'] = hits
 
     comments = news.comments.filter(active=True)
+    comment_count = comments.count()
     new_comment = None
 
     if request.method == "POST":
@@ -56,6 +57,7 @@ def news_detail(request, news):
     context = {
         "news": news,
         'comments': comments,
+        'comment_count': comment_count,
         'new_comment': new_comment,
         'comment_form': comment_form
     }

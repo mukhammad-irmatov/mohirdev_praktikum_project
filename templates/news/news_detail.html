@@ -7,7 +7,8 @@
 {% block content %}
 
      <h2>{{ news.title }}</h2>
-    <h5>{{ news.publish_time }} | <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for news %} </h5>
+    <h5>{{ news.publish_time }} | <i class="fa fa-eye" aria-hidden="true"></i>
+        {% get_hit_count for news %} | Izohlar soni: {{ comment_count }}</h5>
 
     <img src="{{ news.image.url }}">
     <p>{{ news.body }}</p>
@@ -18,7 +19,7 @@
 <a href="{% url 'news_delete' news.slug %}">O'chirish</a> |
 </div>
     {% endif %} <br>
-
+<h3>Bu yangilikka {{ comment_count }} ta izoh qoldirilgan</h3>
 {% for comment in comments %}
 
     <div class="comments" style="padding: 10px">
