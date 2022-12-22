@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "news_app",
+    'hitcount',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,25 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_REDIRECT_URL = 'home_page'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+LOGIN_URL = 'login'
+
+
+
+
+
+
+
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER="mukhammad.irmatov@gmail.com"
+# EMAIL_HOST_PASSWORD="ycqwtwwrecqchjlt"
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER="postmaster@sandbox7f4d7375065245c59e24ca443cb78ed3.mailgun.org"
+EMAIL_HOST_PASSWORD="7f890c93e7d18aaf93b7c3eb505412a7-602cc1bf-ee2305a2"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "mukhammad.ermatov@kimep.kz"

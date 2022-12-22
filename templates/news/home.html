@@ -1,6 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
-
+{% load hitcount_tags %}
 {% block title %} Bosh sahifa {% endblock %}
 
 {% block content %}
@@ -13,6 +13,7 @@
             <div class="slider_article">
               <h2><a class="slider_tittle" href="{{ news.get_absolute_url }}">{{ news.title | truncatewords:5 }}</a></h2>
               <p>{{ news.title }}</p>
+
             </div>
           </div>
             {% endfor %}
@@ -27,7 +28,9 @@
                 {% for news in news_list %}
               <li>
                 <div class="media"> <a href="{{ news.get_absolute_url }}" class="media-left"> <img alt="" src="{{ news.image }}"> </a>
-                  <div class="media-body"> <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a> </div>
+                  <div class="media-body"> <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a>
+                  <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for news %}</p>
+                  </div>
                 </div>
               </li>
                 {% endfor %}
@@ -49,9 +52,11 @@
                 {% for mahalliy in mahalliy_xabarlar %}
                     {% if forloop.first %}
                 <li>
-                  <figure class="bsbig_fig"> <a href="{{ mahalliy.get_absolute_url }}" class="featured_img"> <img alt="" src="{{ mahalliy.image }}"> <span class="overlay"></span> </a>
-                    <figcaption> <a href="{{ mahalliy.get_absolute_url }}">{{ local.title }}</a> </figcaption>
+                  <figure class="bsbig_fig"> <a href="{{ mahalliy.get_absolute_url }}" class="featured_img"> <img alt="" src="{{ mahalliy.image }}"> <span class="overlay"></span>
+                    <figcaption> <a href="{{ mahalliy.get_absolute_url }}">{{ local.title }}</a> </figcaption> </a>
                     <p>{{ mahalliy.body|truncatewords:10 }}</p>
+                      <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for mahalliy %}</p>
+
                   </figure>
                 </li>
                     {% endif %}
@@ -64,7 +69,10 @@
                   {% if forloop.counter > 1 %}
                 <li>
                   <div class="media wow fadeInDown"> <a href="{{mahalliy.get_absolute_url}}" class="media-left"> <img alt="" src="{{ mahalliy.image }}"> </a>
-                    <div class="media-body"> <a href="{{mahalliy.get_absolute_url}}" class="catg_title">{{ mahalliy.title }}</a> </div>
+                    <div class="media-body"> <a href="{{mahalliy.get_absolute_url}}" class="catg_title">{{ mahalliy.title }}</a>
+                  <p>Ko'rilganlar soni: <i class="fa fa-eye" aria-hidden="true"></i> {% get_hit_count for mahalliy %}</p>
+
+                    </div>
                   </div>
                 </li>
                   {% endif %}
@@ -201,28 +209,15 @@
         <aside class="right_content">
           <div class="single_sidebar">
             <h2><span>Ommabop</span></h2>
+              {% for news in popular_news %}
             <ul class="spost_nav">
               <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{{ news.image.url }}"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> {{ news.title }}</a> </div>
                 </div>
               </li>
             </ul>
+              {% endfor %}
           </div>
           <div class="single_sidebar">
             <ul class="nav nav-tabs" role="tablist">
