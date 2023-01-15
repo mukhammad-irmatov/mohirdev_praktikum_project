@@ -13,7 +13,7 @@ SECRET_KEY = "django-insecure-3*gia%2uan7-k!^llviaj=)8u=f+sb+1ukawgmxd1j+4@nu4!9
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["django-mohirdev-demo.uz", "www.django-mohirdev-demo.uz"]
 
@@ -135,10 +135,8 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 # MEDIA_ROOT = BASE_DIR / 'media/'
 
 STATIC_URL = '/static/'
-if DEBUG == False:
-    STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
-else:
-    STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
+STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
+STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
 MEDIA_URL = 'media/'
 MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/media'
 
