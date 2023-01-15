@@ -120,7 +120,7 @@ LANGUAGES = [
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
-LOCALE_PATHS = BASE_DIR, 'locale'
+LOCALE_PATHS = "/home/djangomo/django-mohirdev-demo.uz/django/locale"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
