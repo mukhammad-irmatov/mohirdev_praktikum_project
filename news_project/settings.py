@@ -13,7 +13,7 @@ SECRET_KEY = "django-insecure-3*gia%2uan7-k!^llviaj=)8u=f+sb+1ukawgmxd1j+4@nu4!9
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["django-mohirdev-demo.uz", "www.django-mohirdev-demo.uz"]
 
