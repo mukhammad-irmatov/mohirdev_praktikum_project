@@ -132,8 +132,8 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 #     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 # ]
 
-MEIDA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+# MEIDA_URL = 'media/'
+# MEDIA_ROOT = BASE_DIR / 'media/'
 
 if DEBUG == True:
     STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
