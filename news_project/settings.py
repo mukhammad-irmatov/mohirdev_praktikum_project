@@ -131,16 +131,17 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # MEIDA_URL = 'media/'
 # MEDIA_ROOT = BASE_DIR / 'media/'
-
-STATICFILES_DIRS = ['/home/djangomo/django-mohirdev-demo.uz/django/static_files',]
-STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
+if DEBUG == True:
+    STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
+else:
+    STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/media'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
