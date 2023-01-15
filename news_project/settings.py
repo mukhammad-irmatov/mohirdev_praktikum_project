@@ -136,7 +136,9 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 # MEDIA_ROOT = BASE_DIR / 'media/'
 
 if DEBUG == True:
-    STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
+    # STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
+    STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
+
 else:
     STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
     # STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
