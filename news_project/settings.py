@@ -124,7 +124,6 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 #
-# STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / 'static']
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
 # STATICFILES_FINDERS = [
@@ -135,6 +134,7 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 # MEIDA_URL = 'media/'
 # MEDIA_ROOT = BASE_DIR / 'media/'
 
+STATIC_URL = '/static/'
 STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
 STATICFILES_DIRS = '/home/djangomo/django-mohirdev-demo.uz/django/static_files',
 MEDIA_URL = 'media/'
