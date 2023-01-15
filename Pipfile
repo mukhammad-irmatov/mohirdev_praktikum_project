@@ -8,6 +8,8 @@ django = "==4.0"
 pillow = "*"
 django-hitcount = "*"
 django-modeltranslation = "*"
+python-decouple = "*"
+whitenoise = "*"
 
 [dev-packages]
 
