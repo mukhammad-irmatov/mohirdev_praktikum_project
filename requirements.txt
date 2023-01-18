@@ -8,3 +8,4 @@ python-decouple==3.7
 python-gettext==4.1
 sqlparse==0.4.3
 typing_extensions==4.4.0
+whitenoise==6.3.0

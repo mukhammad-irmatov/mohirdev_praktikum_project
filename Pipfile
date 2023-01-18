@@ -10,6 +10,7 @@ django-hitcount = "*"
 django-modeltranslation = "*"
 python-decouple = "*"
 python-gettext = "*"
+whitenoise = "*"
 
 [dev-packages]
 
