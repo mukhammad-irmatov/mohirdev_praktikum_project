@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce59ee50-b361-40bd-b2d1-80f5d1745f11" name="Changes" comment="" />
+    <list default="true" id="ce59ee50-b361-40bd-b2d1-80f5d1745f11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/jquery.fancybox.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/jquery.fancybox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/slick.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +103,11 @@
       <workItem from="1673793661407" duration="8148000" />
       <workItem from="1673841091206" duration="2199000" />
       <workItem from="1673845315244" duration="5268000" />
-      <workItem from="1674059859771" duration="2469000" />
+      <workItem from="1674059859771" duration="4239000" />
+      <workItem from="1674536791590" duration="29000" />
+      <workItem from="1674536837583" duration="3000" />
+      <workItem from="1674537254450" duration="598000" />
+      <workItem from="1677749900930" duration="5814000" />
     </task>
     <servers />
   </component>
