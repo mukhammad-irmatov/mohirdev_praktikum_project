@@ -125,7 +125,7 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
-STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/staticfiles',)
+STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static-files',)
 
 #local static files
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
