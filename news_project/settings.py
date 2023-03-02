@@ -124,8 +124,12 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STSTIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
+STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static_files',)
+
+#local static files
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -133,7 +137,8 @@ STATICFILES_FINDERS = [
 ]
 
 MEIDA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/media'
+# MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
