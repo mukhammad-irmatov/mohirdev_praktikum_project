@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["django-mohirdev-demo.uz", "www.django-mohirdev-demo.uz", "127.0.0.1"]
 
@@ -125,7 +125,7 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static'
-STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static-files',)
+STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static_files', )
 
 #local static files
 # STATIC_ROOT = BASE_DIR / 'staticfiles'
