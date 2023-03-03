@@ -11,10 +11,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ["django-mohirdev-demo.uz", "www.django-mohirdev-demo.uz", "127.0.0.1"]
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', default=False, cast=bool)
+
+ALLOWED_HOSTS = ["django-mohirdev-demo.uz", 'www.django-mohirdev-demo.uz', '127.0.0.1']
 
 
 # Application definition
@@ -123,13 +124,11 @@ LOCALE_PATHS = BASE_DIR, 'locale'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/static_files'
+STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/staticfiles'
 STATICFILES_DIRS = ('/home/djangomo/django-mohirdev-demo.uz/django/static', )
-
-#local static files
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
-# STATICFILES_DIRS = [BASE_DIR / 'static']
+#local
+# STATIC_ROOT = BASE_DIR / 'staticfiles'  # debug = False
+# STATICFILES_DIRS = [BASE_DIR / 'static'] #debug = True
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -138,6 +137,7 @@ STATICFILES_FINDERS = [
 
 MEIDA_URL = 'media/'
 MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/django/media'
+#local
 # MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
@@ -151,8 +151,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 LOGIN_URL = 'login'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER="mukhammad.irmatov@gmail.com"
